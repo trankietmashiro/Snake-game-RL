@@ -1,3 +1,4 @@
+import argparse
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -122,5 +123,12 @@ def demo():
             game.reset()
 
 if __name__ == '__main__':
-    train()
+    parser = argparse.ArgumentParser(description="Train Snake AI with Q-learning or SARSA")
+    parser.add_argument("--algo", choices=["qlearning", "sarsa"], default="qlearning", help="Algorithm to use")
+    parser.add_argument("--episodes", type=int, default=200, help="Number of episodes to train")
+    args = parser.parse_args()
+
+    use_qlearning = 1 if args.algo == "qlearning" else 0
+    train(use_qlearning, args.episodes)
     demo()
+
