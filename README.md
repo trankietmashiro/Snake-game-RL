@@ -7,7 +7,7 @@ This project experiments with classic value-based Reinforcement Learning (RL) al
 
 - **Q-Learning (off-policy)**
 - **SARSA (on-policy)**
-
+I will experiment more advanced algorithm later (SAC, PPO, TD3)
 It provides a training loop, reproducible configs, and utilities to compare learning curves and policies across both algorithms.
 
 ## Installation
