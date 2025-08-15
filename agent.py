@@ -76,7 +76,7 @@ class Agent:
             mini_sample = self.memory
         
         states, actions, next_actions, rewards, next_states, dones, use_qlearnings = zip(*mini_sample)
-        self.trainer.train_step(states, next_actions, actions, rewards, next_states, dones, use_qlearnings)
+        self.trainer.train_step(states, actions,, next_actions, rewards, next_states, dones, use_qlearnings)
 
     def train_short_memory(self, state, action, next_action, reward, next_state, done, use_qlearning):
         self.trainer.train_step(state, action, next_action, reward, next_state, done, use_qlearning)
@@ -97,3 +97,4 @@ class Agent:
         final_move[move] = 1      
 
         return final_move
+
