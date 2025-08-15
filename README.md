@@ -8,15 +8,7 @@ This project experiments with classic value-based Reinforcement Learning (RL) al
 - **Q-Learning (off-policy)**
 - **SARSA (on-policy)**
 
-It provides a clean training loop, reproducible configs, and utilities to compare learning curves and policies across both algorithms.
-
-## Features
-- Discrete action space (e.g., `left`, `straight`, `right`).
-- Tabular or function-approximation backends (e.g., PyTorch `nn.Module`) for Q-values.
-- ε-greedy exploration with decay scheduling.
-- Logging of returns, episode lengths, epsilon, and loss.
-- Optional replay buffer for Q-Learning with function approximation.
-- Config-driven experiments for easy switching between algorithms.
+It provides a training loop, reproducible configs, and utilities to compare learning curves and policies across both algorithms.
 
 ## Installation
 ```bash
