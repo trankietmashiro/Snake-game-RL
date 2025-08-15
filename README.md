@@ -18,49 +18,11 @@ It provides a clean training loop, reproducible configs, and utilities to compar
 - Optional replay buffer for Q-Learning with function approximation.
 - Config-driven experiments for easy switching between algorithms.
 
-## Project Structure (suggested)
-```
-project/
-├─ env/
-│  ├─ snake_env.py          # Game logic + RL interface (reset/step/render)
-│  └─ wrappers.py           # Optional: state preprocessing, frame stacking
-├─ agents/
-│  ├─ qlearning.py          # Q-Learning agent
-│  ├─ sarsa.py              # SARSA agent
-│  └─ networks.py           # PyTorch nets (Linear/QNet, etc.)
-├─ training/
-│  ├─ train.py              # Training entrypoint
-│  └─ evaluate.py           # Policy rollout & video export
-├─ utils/
-│  ├─ replay_buffer.py      # Optional for function approximation
-│  └─ logger.py             # CSV/JSON logging, plots
-├─ configs/
-│  ├─ qlearning.yaml
-│  └─ sarsa.yaml
-├─ requirements.txt
-└─ README.md
-```
-
-## Requirements
-- Python >= 3.9
-- PyTorch (if using function approximation)
-- NumPy, matplotlib (for plots)
-- (Optional) pygame for rendering
-
-Example `requirements.txt`:
-```
-numpy
-matplotlib
-torch
-pygame
-pyyaml
-```
-
 ## Installation
 ```bash
 # clone your repo first, then
-python -m venv .venv
-source .venv/bin/activate  # Windows: .venv\Scripts\activate
+conda create -n snakerl_env python=3.12
+conda activate snakerl_env
 pip install -r requirements.txt
 ```
 
