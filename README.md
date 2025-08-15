@@ -48,10 +48,10 @@ def decay_epsilon(eps, rate=0.995, min_eps=0.05):
 ## How to Run
 ```bash
 # Q-Learning
-python -m training.train --algo qlearning --episodes 2000
+python3 main.py --algo qlearning --episodes 2000
 
 # SARSA
-python -m training.train --algo sarsa --episodes 2000
+python main.py --algo sarsa --episodes 2000
 ```
 
 ## Acknowledgments
